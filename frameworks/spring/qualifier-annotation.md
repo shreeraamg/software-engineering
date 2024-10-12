@@ -1,8 +1,7 @@
 # Qualifier Annotation in Spring Boot
 
-> [!Pre-requisites]
-> Autowiring
-> Interface & Abstract class
+> [!Note]
+> Pre-requisites for this is Autowiring and Interface
 
 Let's say you are coding to interface in a spring boot project, as a part of which there are two implementations of a 
 particular service interface. For real world example consider this as versioning your RestAPIs.
@@ -116,7 +115,7 @@ in Spring to resolve ambiguity when multiple beans of the same type exist."
 ![img.png](img.png)
 
 Also, this is the part where a better understanding of autowiring helps. The IDE says "Could not autowire. There is more
-than one bean of 'TestService' type". So the autowire first tries to resole dependencies by type (through Spring 
+than one bean of 'TestService' type". So the autowire first tries to resolve dependencies by type (through Spring 
 Autowiring `byType` mechanism). Since that fails we have to tell spring to use this particular implementation  using the
 `@Qualifier` annotation
 
